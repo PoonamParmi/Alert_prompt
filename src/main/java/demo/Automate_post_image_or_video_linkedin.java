@@ -12,8 +12,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-
-import io.github.bonigarcia.wdm.WebDriverManage
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

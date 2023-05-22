@@ -90,4 +90,11 @@ public class TestCases {
         Automate_post_image_or_video_linkedin video = new Automate_post_image_or_video_linkedin();
         video.image_video_Link();
     }
+
+    public void testCase07() throws InterruptedException
+    {
+        System.out.println("Start testCase: testCase07 is nested frame and print the text from that framw");
+        nested_frames_text nest = new nested_frames_text();
+        nest.frame();
+    }
 }

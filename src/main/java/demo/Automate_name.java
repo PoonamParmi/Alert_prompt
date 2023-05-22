@@ -37,7 +37,7 @@ public class Automate_name {
         // Navigate to URL https://www.google.com/
         driver.get("https://www.google.com/");
 
-        // Click on Search Bar Using Locator "Name" q
+        // Click on Search Bar Using Locator "Name" 
         driver.findElement(By.name("q")).click();
 
         // Type in "Puja" in Search bar Using Locator "Name" q

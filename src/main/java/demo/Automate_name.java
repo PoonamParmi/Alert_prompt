@@ -1,4 +1,5 @@
 package demo;
+
 import java.io.File;
 import java.util.List;
 import java.util.Set;
@@ -27,18 +28,32 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Bookmyshow_hyperlink {
-    ChromeDriver driver;
-   
-    public void count_links_onpage(){
-        this.driver = TestCases.TestCasesInitializer();
-        // Nevigate to Url  https://in.bookmyshow.com/explore/home/chennai
-        driver.get("https://in.bookmyshow.com/explore/home/chennai");
+public class Automate_name {
 
-        // Locate the locater for hyperlink  Using Locator "Name" a
-        int count = driver.findElements(By.tagName("a")).size();
-        // Get count of the hyperlinks Using Locator "Name" a
-        System.out.println(count);
-     }
+    ChromeDriver driver;
+
+    public void Myname() throws InterruptedException {
+        this.driver = TestCases.TestCasesInitializer();
+        // Navigate to URL https://www.google.com/
+        driver.get("https://www.google.com/");
+
+        // Click on Search Bar Using Locator "Name" q
+        driver.findElement(By.name("q")).click();
+
+        // Type in "Puja" in Search bar Using Locator "Name" q
+        driver.findElement(By.name("q")).sendKeys("Poonam Kate");
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+
+        // Click on Google Search Button Using Locator "XPath" (//input[@value='Google
+        // Search'])[1]
+        int count = driver.findElements(By.partialLinkText("Poonam Kate")).size();
+        Thread.sleep(2000);
+
+        // Count of links in the search result with name Using Locator "XPath"
+        // //h3[text()='Puja']
+        // int count = driver.findElementByXPath("a");
+        Thread.sleep(3000);
+        System.out.println("count :" + count);
+    }
 }
- 

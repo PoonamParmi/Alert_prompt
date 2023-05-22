@@ -47,7 +47,7 @@ public class TestCases {
 
     public void endTest() {
         System.out.println("End Test: TestCases");
-        driver.close();
+        // driver.close();
         driver.quit();
 
     }
@@ -65,5 +65,20 @@ public class TestCases {
         Bookmyshow_hyperlink hyperlink = new Bookmyshow_hyperlink();
         hyperlink.count_links_onpage();
 }
+    public void testCase03() throws InterruptedException
+    {
+        System.out.println("Start testCase: testCase03 : Create Post on Linkedin");
+
+        CreatePost_on_Linkidin p = new CreatePost_on_Linkidin();
+         p.post_link();
+    }
+
+    public void testCase04() throws InterruptedException {
+        System.out.println("Start testCase: testCase04 is Automate the my name in google and count it ");
+        Automate_name name = new Automate_name();
+        name.Myname();  
  } 
+}
+
+
   

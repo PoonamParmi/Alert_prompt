@@ -53,7 +53,7 @@ public class TestCases {
     }
 //SESSION 4 ASSIGMENTS
  public void testCase01(){
-     System.out.println("Start Test case: testCase01");
+     System.out.println("Start Test case: testCase01 of search amazon.in on Google Page");
         Amazon_search amazon = new Amazon_search();
         amazon.search_amazon_on_google();
      }
@@ -61,15 +61,11 @@ public class TestCases {
 
 
     public void testCase02(){
-        System.out.println("Start Test case: testCase02");
-        // Nevigate to Url  https://in.bookmyshow.com/explore/home/chennai
-        driver.get("https://in.bookmyshow.com/explore/home/chennai");
+        System.out.println("Start Test case: testCase02 Count Hyperlinks present on Page of BookMyShow");
+        Bookmyshow_hyperlink hyperlink = new Bookmyshow_hyperlink();
+        hyperlink.count_links_onpage();
 
-        // Locate the locater for hyperlink  Using Locator "Name" a
-        int count = driver.findElements(By.tagName("a")).size();
-
-        // Get count of the hyperlinks Using Locator "Name" a
-        System.out.println(count);
+        
     }
 
 

@@ -32,13 +32,9 @@ import org.openqa.selenium.support.ui.Select;
 public class Amazon_search
 {
     ChromeDriver driver;
-   public void search_amazon_on_google()
+   public void  search_amazon_on_google()
    {
-        // System.out.println("Start Test case: testCase01");
-        // Amazon_search amazon = new Amazon_search();
-        // amazon.search_amazon_on_google();
-
-    this.driver = TestCases.TestCasesInitializer();
+     this.driver = TestCases.TestCasesInitializer();
         // Negivagte to URL
         driver.get("https://www.google.com");
 

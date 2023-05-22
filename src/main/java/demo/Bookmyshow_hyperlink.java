@@ -13,7 +13,6 @@ public class Bookmyshow_hyperlink {
 
         // Locate the locater for hyperlink  Using Locator "Name" a
         int count = driver.findElements(By.tagName("a")).size();
-
         // Get count of the hyperlinks Using Locator "Name" a
         System.out.println(count);
      }

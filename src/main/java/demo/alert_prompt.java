@@ -1,4 +1,5 @@
 package demo;
+
 import java.io.File;
 import java.util.List;
 import java.util.Set;
@@ -24,43 +25,48 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
-
+// import org.rauschig.jarchivelib.FileModeMapper.PosixPermissionMapper;
 
 public class alert_prompt {
     ChromeDriver driver;
 
-    public void alert() throws InterruptedException
-    {
-        this.driver =TestCases.TestCasesInitializer();
-        
-        //navigate to the url https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+    public void alert() throws InterruptedException {
+        this.driver = TestCases.TestCasesInitializer();
+
+        // navigate to the url
+        // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
         driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt");
-        // Go to the iframe where "try it" button is present Using Xpath //iframe[@name='iframeResult']
+        // Go to the iframe where "try it" button is present Using Xpath
+        // //iframe[@name='iframeResult']
         WebElement framess = driver.findElement(By.xpath("//iframe[@name='iframeResult']"));
         driver.switchTo().frame(framess);
-        
+
         // click on the "try it" button using xpath "//button[text()='Try it']"
         driver.findElement(By.xpath("//button[text()='Try it']")).click();
         
-        //switch to the javascript alert
-        Alert alert =  driver.switchTo().alert();
-        
-        //print the text on the alert
+        // switch to the javascript alert
+        Alert alert = driver.switchTo().alert();
+
+        // print the text on the alert
         String text = alert.getText();
-        System.out.println("The text message written in the alert is : "+ text);
-       
+
+        System.out.println("The text message written in the alert is : " + text);
+
         // send your name to alert text field and accept it
-        alert.sendKeys("Poonam Kate");
-        // Thread.sleep(2000);
+        String myName = "Poonam";
+        alert.sendKeys("Poonam");
         alert.accept();
-        
+       
         // check if your name is get printed or not Using Xpath "//p[@id='demo']"
-        WebElement validation = driver.findElement(By.xpath("//p[@id='demo']"));
-        if(validation.getText().equals("Hello Poonam! How are you today?")){
-            System.out.println("Yes the name is getting printed");
-        }else{
-            System.out.println("Name is not getting printed");
+        WebElement output = driver.findElement(By.xpath("//p[@id='demo']"));
+        String outputText = output.getText();
+        
+        if (outputText.contains("Poonam")) {
+            System.out.println("Hello Poonam! How are you today?");
+        } else {
+            System.out.println("Name is not Printed");
         }
-     
+
     }
+
 }

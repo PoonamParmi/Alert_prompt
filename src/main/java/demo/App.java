@@ -48,9 +48,9 @@ public class App{
 
         //  tests.testCase06();
         // tests.testCase07();
-        //  tests.testCase08();
+         tests.testCase08();
         //  tests.testCase09();
-         tests.testCase10();
+    //  tests.testCase10();    
   
         // END Tests
 

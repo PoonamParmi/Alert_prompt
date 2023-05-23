@@ -80,35 +80,40 @@ public class TestCases {
     public void testCase05() throws InterruptedException {
         System.out.println(
                 "Start testCase: testCase05 is finding the image url and print the name and Language of 2nd premier list");
-          Automate_image_url url = new Automate_image_url();
-          url.imageurl();
-}
+        Automate_image_url url = new Automate_image_url();
+        url.imageurl();
+    }
 
     public void testCase06() throws InterruptedException, AWTException {
-        
+
         System.out.println("Test case 06 is to create a post on linkedin with Image or Video");
         Automate_post_image_or_video_linkedin video = new Automate_post_image_or_video_linkedin();
         video.image_video_Link();
     }
 
-    public void testCase07() throws InterruptedException
-    {
+    public void testCase07() throws InterruptedException {
         System.out.println("Start testCase: testCase07 is nested frame and print the text from that framw");
         nested_frames_text nest = new nested_frames_text();
         nest.frame();
     }
-  
-  public void testCase08() throws InterruptedException{
-    System.out.println("Start testCase: testCase08 is about alert mesaage");
-    alert_prompt al =  new alert_prompt();
-    al.alert();
-  }
 
-  public void testCase09(){
-    System.out.println("Start testCase: testCase09 is about imdb Rating of moive");
-    imdb_ratings imd = new imdb_ratings();
-    imd.ratings();
-    
-    
-}
+    public void testCase08() throws InterruptedException {
+        System.out.println("Start testCase: testCase08 is about alert mesaage");
+        alert_prompt al = new alert_prompt();
+        al.alert();
+    }
+
+    public void testCase09() {
+        System.out.println("Start testCase: testCase09 is imdb Rating of moive");
+        imdb_ratings imd = new imdb_ratings();
+        imd.ratings();
+    }
+
+    public void testCase10() throws InterruptedException {
+        System.out.println(
+                "Start testCase: testCase10 is  Get the URL, Title, and take the screenshot and go to original window");
+        window_handle win = new window_handle();
+        win.window();
+    }
+
 }

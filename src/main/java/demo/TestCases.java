@@ -97,4 +97,18 @@ public class TestCases {
         nested_frames_text nest = new nested_frames_text();
         nest.frame();
     }
+  
+  public void testCase08() throws InterruptedException{
+    System.out.println("Start testCase: testCase08 is about alert mesaage");
+    alert_prompt al =  new alert_prompt();
+    al.alert();
+  }
+
+  public void testCase09(){
+    System.out.println("Start testCase: testCase09 is about imdb Rating of moive");
+    imdb_ratings imd = new imdb_ratings();
+    imd.ratings();
+    
+    
+}
 }
